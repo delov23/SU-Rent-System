@@ -1,0 +1,24 @@
+{{#if rents}}
+    <table>
+        <thead>
+            <tr>
+                <th>CAR</th>
+                <th>EXPIRE DAY</th>
+                <th>OWNER</th>
+                <th>END RENT</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each rents}}
+            <tr>
+                <td>{{car.model}}</td>
+                <td>{{expireDay}}</td>
+                <td>{{owner.username}}</a></td>
+                <td><a href="/admin/endRent/{{_id}}" class="remove">X</a></td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+{{else}}
+    <h1>Nothing found.</h1>
+{{/if}}

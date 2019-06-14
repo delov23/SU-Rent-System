@@ -1,0 +1,24 @@
+{{#if users}}
+    <table>
+        <thead>
+            <tr>
+                <th>USER</th>
+                <th>NAME</th>
+                <th>REMOVE</th>
+                <th>MAKE ADMIN</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each users}}
+            <tr>
+                <td>{{username}}</td>
+                <td>{{firstName}} {{lastName}}</td>
+                <td><a href="/admin/removeUser/{{_id}}" class="remove">X</a></td>
+                <td><a href="/admin/makeAdmin/{{_id}}" class="makeAdmin">&UpArrow;</a></td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+{{else}}
+    <h1>Nothing found.</h1>
+{{/if}}

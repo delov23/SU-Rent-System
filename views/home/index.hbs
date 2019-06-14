@@ -1,0 +1,11 @@
+<section id="home">
+    <h1 style="font-size: 44pt">Welcome to our Car Renting System Web Application!</h1>
+    {{#if ./user}}
+        <a href="/car/all" class="home-btn">Rent a car now...</a>
+    {{/if}}
+    {{#unless ./user}}
+        <a href="/user/login" class="home-btn">Log in</a>
+        <a href="/user/register" class="home-btn">Sign up</a>
+    {{/unless}}
+    <hr />
+</section>
